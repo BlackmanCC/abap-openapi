@@ -90,7 +90,7 @@ CLASS zcl_oapi_abap_name IMPLEMENTATION.
     ENDIF.
     ">>>A5296600: Camel Case Conversion, e.g. BdewCode -> bdew_code
     rv_name = cl_fpm_bol_utilities=>convert_upper_camel_case( rv_name ).
-    rv_name = to_lower( iv_name ).
+    rv_name = to_lower( rv_name ).
     "<<<A5296600: Camel Case Conversion, e.g. BdewCode -> bdew_code
     IF strlen( rv_name ) > 28.
       rv_name = rv_name(28).
